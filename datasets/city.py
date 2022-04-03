@@ -22,6 +22,7 @@ def load_and_preprocess_image_pair(img_pair_path):
 
 def build_city_image_dataset(list_path, 
                              root_path="/",
+                             label_path=None,
                              start=None, n=None):
     img_path_list = list()
     with open(list_path, "r") as fin:
@@ -33,7 +34,14 @@ def build_city_image_dataset(list_path,
     path_ds = tf.data.Dataset.from_tensor_slices(img_path_list)
     img_ds = path_ds.map(load_and_preprocess_image)
 
-    return img_ds
+    if label_path is None:
+        return img_ds
+
+    label_d = np.load(label_path)
+    label_ds = tf.data.Dataset.from_tensor_slices(label_d)
+
+    ds = tf.data.Dataset.zip((img_ds, label_ds))
+    return ds
 
 
 def build_city_image_pair_dataset(list_path, 

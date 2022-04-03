@@ -118,6 +118,7 @@ We can plot the results:
 
 <img src="./.github/speech_plot.PNG" width="300"/>
 
+Another example using YOLOv3 object detector for vehicle counting is also in `examples/video_yolov3*` and the data for running the notebooks can be downloaded from [google drive](https://drive.google.com/file/d/11kkeuLd4PRYL7rpjal5ralAqxrr-hr7W/view?usp=sharing).
 
 ## Citation
 
