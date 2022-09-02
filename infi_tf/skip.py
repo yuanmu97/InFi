@@ -67,7 +67,8 @@ def build_infi_skip(modality, input_shape, n_dense, dropout=0.5,
 def train_infi_skip(infi_skip, train_data, 
                     learning_rate=0.001, batch_size=32, epochs=20,
                     val_data=None, log_dir=None, weight_dir=None,
-                    optimizer=None, loss="binary_crossentropy"):
+                    optimizer=None, loss="binary_crossentropy",
+                    monitor="val_binary_accuracy", mode="max"):
     """
     train InFi-Skip model
 
@@ -97,8 +98,8 @@ def train_infi_skip(infi_skip, train_data,
         Path(weight_dir).mkdir(parents=True, exist_ok=True)
         ckpt_callback = tf.keras.callbacks.ModelCheckpoint(
             os.path.join(weight_dir, timestr+"-BEST.h5"),
-            monitor="val_binary_accuracy",
-            mode="max",
+            monitor=monitor,
+            mode=mode,
             save_best_only=True
         )
         callbacks.append(ckpt_callback)
