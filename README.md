@@ -122,8 +122,4 @@ Another example using YOLOv3 object detector for vehicle counting is also in `ex
 
 ## Citation
 
-Mu Yuan, Lan Zhang, Fengxiang He, Xueting Tong, and Xiang-Yang Li.
-2022. InFi: End-to-end Learnable Input Filter for Resource-efficient Mobilecentric Inference. In The 28th Annual International Conference On Mobile
-Computing And Networking (ACM MobiCom ’22), October 24–28, 2022, Sydney,
-NSW, Australia. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/
-3495243.3517016
+Mu Yuan, Lan Zhang, Fengxiang He, Xueting Tong, and Xiang-Yang Li. 2022. InFi: End-to-end Learnable Input Filter for Resource-efficient Mobilecentric Inference. In The 28th Annual International Conference On Mobile Computing And Networking (ACM MobiCom ’22), October 17–21, 2022, Sydney, NSW, Australia. ACM, New York, NY, USA, 14 pages. https://doi.org/10.1145/ 3495243.3517016
