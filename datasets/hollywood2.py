@@ -33,7 +33,7 @@ def build_hollywood2_image_dataset(list_path,
     return img_ds
 
 
-def build_hollywood2_image_pair_dataset(list_path, root_path="/", postfix="_30.jpg"):
+def build_hollywood2_image_pair_dataset(list_path, root_path="/", postfix="_30.jpg", load_label=True):
     img_pair_path_list = list()
     y = list()
     with open(list_path, "r") as fin:
@@ -49,6 +49,9 @@ def build_hollywood2_image_pair_dataset(list_path, root_path="/", postfix="_30.j
     path_ds = tf.data.Dataset.from_tensor_slices(img_pair_path_list)
     img_pair_ds = path_ds.map(load_and_preprocess_image_pair)
     y_ds = tf.data.Dataset.from_tensor_slices(y)
+
+    if not load_label:
+        return img_pair_ds
 
     return tf.data.Dataset.zip((img_pair_ds, y_ds))
 
