@@ -17,6 +17,8 @@ If you'd like to play with jupyter notebook examples, you need to install Jupyte
 
 ## Quick Start
 
+### InFi-Skip
+
 We use the speech recognition workload on Hollywood2 dataset as an example to show how to train and evaluate InFi-Skip.
 
 You can download the raw data (infi_dataset_hollywood2) from [google drive](https://drive.google.com/file/d/1gXil_vQlrKirSmtyYENQ5I22p2x7CV1c/view?usp=sharing).
@@ -119,6 +121,11 @@ We can plot the results:
 <img src="./.github/speech_plot.PNG" width="300"/>
 
 Another example using YOLOv3 object detector for vehicle counting is also in `examples/video_yolov3*` and the data for running the notebooks can be downloaded from [google drive](https://drive.google.com/file/d/11kkeuLd4PRYL7rpjal5ralAqxrr-hr7W/view?usp=sharing).
+
+### InFi-Reuse
+
+An example of using InFi-Reuse on gender classification task can be found in `examples/hollywood2_imgpair_preprocess.ipynb` (preprocessing) and `examples/hollywood2_gender_infi_reuse*`.
+Data can be downloaded from [google drive](https://drive.google.com/drive/folders/1-wRD73PXBR5Jh80uff0bG8VEnAycFeK5?usp=sharing).
 
 ## Citation
 
